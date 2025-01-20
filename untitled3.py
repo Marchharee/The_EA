@@ -15,8 +15,20 @@ class EuclideanAlgorithm:
             b = a % b#get a remainder
             a = new_b#let the a be the formal b
         return a#return to the GCD of a and b
-a=186
-b=296
-answer=EuclideanAlgorithm()
-gcd=answer.calculate_gcd(a, b)
-print(f"The GCD of {a} and {b} is: {gcd}")
+    
+def the_answer():
+
+#let the user to input the number
+    a = int(input("Please enter the first positive integer: "))
+    b = int(input("Please enter the second positive integer: "))
+
+    if a <= 0 or b <= 0:#make sure a and b be the positive integer
+        print("Error: Both numbers must be positive integers.")
+        return
+
+    answer = EuclideanAlgorithm()#use the main function
+    gcd = answer.calculate_gcd(a, b)
+    print(f"The GCD of {a} and {b} is: {gcd}")
+
+if __name__=="__main__":
+    the_answer()
